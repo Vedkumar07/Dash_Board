@@ -1,12 +1,40 @@
-# React + Vite
+# Interactive Workflow Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+The **Interactive Workflow Builder** is a dynamic, drag-and-drop tool for designing task automation flows. It enables users to create, edit, and visualize workflows in real-time, using an intuitive node-based interface. 
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🔹 Node-Based UI
+- Add, move, and connect nodes to build workflows.
+- Each node represents an action (e.g., Fetch Data, Transform, Send Email).
+- Drag-and-drop functionality for smooth interaction.
 
-## Expanding the ESLint configuration
+### 🔹 Real-Time Execution
+- WebSockets enable live updates and real-time workflow changes.
+- Dynamic processing of input data.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔹 JSON Data Handling
+- Each node takes JSON input and produces JSON output.
+- Example JSON representation:
+  ```json
+  {
+    "id": "1",
+    "type": "Fetch Data",
+    "output": {
+      "users": [
+        {"id": "101", "name": "Alice", "description": "Admin"},
+        {"id": "102", "name": "Bob", "description": "Editor"}
+      ]
+    }
+  }
+### 🔧 Tech Stack
+-Frontend: React.js / Next.js (UI Development)
+-Graph Visualization: D3.js / React Flow
+-Real-Time Processing: WebSockets
+-Data Handling: JSON processing & visualization
+
+###  Run the App
+
+-npm run dev
+-node server.js
